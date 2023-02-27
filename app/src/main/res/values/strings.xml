@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">FAD</string>
+    <string name="splash_title">안드로이드 개발을 도와죠</string>
+    <string name="splash_subTitle">FAD: For Android Development</string>
 </resources>

@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!--파스텔 컬러-->
+    <color name="pastel_red">#FFCCD1</color>
+    <color name="pastel_orange">#FDDFCC</color>
+    <color name="pastel_yellow">#FBEECC</color>
+    <color name="pastel_green">#CCE7E1</color>
+    <color name="pastel_blue">#CCE4F9</color>
+    <color name="pastel_violet">#E1D3F8</color>
 </resources>

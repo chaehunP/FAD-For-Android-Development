@@ -5,6 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import android.text.Spannable
+import android.text.Spanned
+import android.text.style.ForegroundColorSpan
+import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,9 +19,23 @@ class SplashActivity : AppCompatActivity() {
         val runnable = Runnable{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish()
+
         }
         handler.postDelayed(runnable, 3000)
+
+        val span: Spannable = tv_splash_title.text as Spannable
+
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_violet)),12,13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_blue)),11,12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_green)),10,11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_yellow)),8,9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_orange)),7,8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_red)),6,7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_blue)),4,5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_green)),3,4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_yellow)),2,3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_orange)),1,2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_red)),0,1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
     }
 }

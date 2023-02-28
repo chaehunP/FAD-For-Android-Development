@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/blog"
+        android:title="@string/blog"
+        android:icon="@drawable/ic_baseline_web_24"/>
+
+    <item
+        android:id="@+id/development_android"
+        android:title="@string/development_android"
+        android:icon="@drawable/ic_baseline_android_24"/>
+
+    <item
+        android:id="@+id/kotlin"
+        android:title="@string/kotlinlang"/>
+</menu>

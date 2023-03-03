@@ -1,10 +1,12 @@
 package com.firstproject.fad
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_developer.*
 import kotlinx.android.synthetic.main.fragment_kotlin.*
@@ -27,17 +29,16 @@ class KotlinFragment: Fragment() {
         }
 
         kotlin_webView.loadUrl("https://kotlinlang.org/docs/basic-syntax.html")
-    }
 
-    fun onBackPressed() {
-        if (android_webView.canGoBack())
-        {
-            android_webView.goBack()
-        }
-        else
-        {
-//            finish()
-        }
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (kotlin_webView.canGoBack()) {
+                    kotlin_webView.goBack()
+                } else {
+//                    System.exit(0)
+                    startActivity(Intent(context, MainActivity::class.java))
+                }
+            }
+        })
     }
-
 }

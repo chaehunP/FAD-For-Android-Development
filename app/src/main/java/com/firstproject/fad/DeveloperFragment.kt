@@ -1,10 +1,12 @@
 package com.firstproject.fad
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_developer.*
 
@@ -26,17 +28,15 @@ class DeveloperFragment: Fragment() {
         }
 
         android_webView.loadUrl("https://developer.android.com/?hl=ko")
-    }
 
-    fun onBackPressed() {
-        if (android_webView.canGoBack())
-        {
-            android_webView.goBack()
-        }
-        else
-        {
-//            finish()
-        }
+        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, object: OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (android_webView.canGoBack()) {
+                    android_webView.goBack()
+                } else {
+                    startActivity(Intent(context, MainActivity::class.java))
+                }
+            }
+        })
     }
-
 }

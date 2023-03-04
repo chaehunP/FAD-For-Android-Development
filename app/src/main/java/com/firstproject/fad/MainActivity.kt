@@ -1,10 +1,14 @@
 package com.firstproject.fad
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import kotlinx.android.synthetic.main.fragment_developer.*
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,5 +22,14 @@ class MainActivity : AppCompatActivity() {
         navController?.let {
             bottomNavigationView.setupWithNavController(it)
         }
+    }
+
+    fun goPower(v: View) {
+        exitProcess(0)
+    }
+
+    fun goHome(v: View) {
+        startActivity(Intent(this, MainActivity::class.java))
+        finish()
     }
 }

@@ -36,7 +36,6 @@ class KotlinFragment: Fragment() {
                     kotlin_webView.goBack()
                 } else {
 //                    System.exit(0)
-                    startActivity(Intent(context, MainActivity::class.java))
                 }
             }
         })

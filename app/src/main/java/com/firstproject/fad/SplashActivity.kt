@@ -19,9 +19,17 @@ class SplashActivity : AppCompatActivity() {
         val runnable = Runnable{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
 
         }
         handler.postDelayed(runnable, 3000)
+
+        splash_main.setOnClickListener{
+            handler.removeCallbacks(runnable) // 화면을 클릭하고 메인화면으로 진입했을 때 다시 3초가 지나서 splash 화면이 안뜨도록 handler 중지
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
 
         val span: Spannable = tv_splash_title.text as Spannable
 

@@ -5,4 +5,5 @@
     <string name="blog">블로그</string>
     <string name="development_android">developers</string>
     <string name="kotlinlang">Kotlin</string>
+    <string name="splashLoadingText">화면 터치시 바로 시작해요:D</string>
 </resources>

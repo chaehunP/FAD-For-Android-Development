@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.fragment_developer.*
 import kotlinx.android.synthetic.main.fragment_kotlin.*
 
-class KotlinFragment: Fragment() {
+class KotlinFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -30,14 +30,18 @@ class KotlinFragment: Fragment() {
 
         kotlin_webView.loadUrl("https://kotlinlang.org/docs/basic-syntax.html")
 
-        activity?.onBackPressedDispatcher?.addCallback(viewLifecycleOwner, object: OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-                if (kotlin_webView.canGoBack()) {
-                    kotlin_webView.goBack()
-                } else {
+        activity?.onBackPressedDispatcher?.addCallback(
+            viewLifecycleOwner,
+            object : OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    if (kotlin_webView.canGoBack()) {
+                        kotlin_webView.goBack()
+                    } else {
 //                    System.exit(0)
+                        startActivity(Intent(context, MainActivity::class.java))
+                        activity?.finish()
+                    }
                 }
-            }
-        })
+            })
     }
 }

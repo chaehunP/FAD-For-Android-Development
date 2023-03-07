@@ -1,10 +1,11 @@
-package com.firstproject.fad
+package com.firstproject.fad.common
 
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
+import com.firstproject.fad.R
 
 
 class OutlineTextView : AppCompatTextView {

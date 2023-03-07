@@ -8,24 +8,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_blog"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
         tools:listitem="@layout/item_blog"
-        app:layout_constraintBottom_toTopOf="@id/tv_test"
         app:layout_constraintTop_toTopOf="parent"
         />
 
-    <TextView
-        android:id="@+id/tv_test"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rv_blog"
-        android:text="테스트 화면"
-        android:textSize="50sp"
-        android:gravity="center"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.firstproject.fad.HomeFragment"
+        android:name="com.firstproject.fad.fragment.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/blog"
-        android:name="com.firstproject.fad.BlogFragment"
+        android:name="com.firstproject.fad.fragment.blog.BlogFragment"
         android:label="BlogFragment"
         tools:layout="@layout/fragment_blog"/>
     <fragment
         android:id="@+id/development_android"
-        android:name="com.firstproject.fad.DeveloperFragment"
+        android:name="com.firstproject.fad.fragment.DeveloperFragment"
         android:label="DeveloperFragment"
         tools:layout="@layout/fragment_developer"/>
     <fragment
         android:id="@+id/kotlin"
-        android:name="com.firstproject.fad.KotlinFragment"
+        android:name="com.firstproject.fad.fragment.KotlinFragment"
         android:label="KotlinFragment"
         tools:layout="@layout/fragment_kotlin"/>
 </navigation>

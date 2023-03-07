@@ -1,10 +1,12 @@
-package com.firstproject.fad
+package com.firstproject.fad.fragment.blog
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.firstproject.fad.R
+import kotlinx.android.synthetic.main.fragment_blog.*
 
 
 class BlogFragment: Fragment() {
@@ -19,7 +21,7 @@ class BlogFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-//        rv_blog.adapter =
+        rv_blog.adapter = BlogAdapter()
 
     }
 

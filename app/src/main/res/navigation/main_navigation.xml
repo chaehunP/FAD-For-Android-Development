@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_home"/>
     <fragment
         android:id="@+id/blog"
-        android:name="com.firstproject.fad.fragment.blog.BlogFragment"
+        android:name="com.firstproject.fad.fragment.news.NewsFragment"
         android:label="BlogFragment"
-        tools:layout="@layout/fragment_blog"/>
+        tools:layout="@layout/fragment_news"/>
     <fragment
         android:id="@+id/development_android"
         android:name="com.firstproject.fad.fragment.DeveloperFragment"

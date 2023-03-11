@@ -3,8 +3,10 @@
     <string name="splash_title">안드로이드 개발을 도와쥬</string>
     <string name="main_title">안드로이드 개발을 도와쥬</string>
     <string name="splash_subTitle">FAD: For Android Development</string>
-    <string name="blog">블로그</string>
+    <string name="news">IT 뉴스</string>
     <string name="development_android">developers</string>
     <string name="kotlinlang">Kotlin</string>
     <string name="splashLoadingText">화면 터치시 바로 시작해요:D</string>
+    <string name="news_title">기사 제목입니다.</string>
+    <string name="update_date">2023-03-11</string>
 </resources>

@@ -11,7 +11,7 @@
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home"/>
     <fragment
-        android:id="@+id/blog"
+        android:id="@+id/news"
         android:name="com.firstproject.fad.fragment.news.NewsFragment"
         android:label="BlogFragment"
         tools:layout="@layout/fragment_news"/>

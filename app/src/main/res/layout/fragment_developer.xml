@@ -42,7 +42,6 @@
         android:id="@+id/android_webView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:usesCleartextTraffic="true"
         />
 
 </LinearLayout>

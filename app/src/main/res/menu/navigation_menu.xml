@@ -12,6 +12,12 @@
         android:icon="@drawable/selected_news"/>
 
     <item
+        android:id="@+id/news_monitor"
+        android:title="뉴스시청"
+        android:visible="false"
+        />
+
+    <item
         android:id="@+id/development_android"
         android:title="@string/development_android"
         android:icon="@drawable/selected_android"/>

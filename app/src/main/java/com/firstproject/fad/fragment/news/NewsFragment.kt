@@ -14,7 +14,6 @@ import kotlin.coroutines.CoroutineContext
 
 
 class NewsFragment : Fragment(), CoroutineScope {
-
     data class newsItem(val title: String, val link: String, val date: String)
 
     // 구글 뉴스의 RSS 피드를 가져오는 코드
@@ -63,7 +62,6 @@ class NewsFragment : Fragment(), CoroutineScope {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         // 가져온 RSS 피드를 화면에 뉴스 정보를 출력하는 기능을 수행하는 코드
         GlobalScope.launch(Dispatchers.Main) {
             val newsList = RssFeed().getNews()
@@ -74,9 +72,13 @@ class NewsFragment : Fragment(), CoroutineScope {
                 newsString.append(it.date)
                 newsString.append("\n\n")
             }
-            rv_news.adapter = NewsAdapter(context, newsList)
-
+            try {
+                rv_news.adapter = NewsAdapter(context, newsList)
+            } catch (e: IllegalStateException) {
+                // 어댑터가 연결되어 있지 않은 상태에서 데이터를 추가하려고 하면 예외가 발생할 수 있음
+                // 예외 처리를 해줌으로써 앱이 종료되는 것을 방지할 수 있음
+                e.printStackTrace()
+            }
         }
-
     }
 }

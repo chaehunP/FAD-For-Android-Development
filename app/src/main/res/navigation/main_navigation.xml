@@ -13,8 +13,8 @@
     <fragment
         android:id="@+id/news"
         android:name="com.firstproject.fad.fragment.news.NewsFragment"
-        android:label="BlogFragment"
-        tools:layout="@layout/fragment_news"/>
+        android:label="NewsFragment"
+        tools:layout="@layout/fragment_news" />
     <fragment
         android:id="@+id/development_android"
         android:name="com.firstproject.fad.fragment.DeveloperFragment"
@@ -25,4 +25,9 @@
         android:name="com.firstproject.fad.fragment.KotlinFragment"
         android:label="KotlinFragment"
         tools:layout="@layout/fragment_kotlin"/>
+    <fragment
+        android:id="@+id/news_monitor"
+        android:name="com.firstproject.fad.fragment.news.NewsWebViewFragment"
+        android:label="NewsWebViewFragment"
+        tools:layout="@layout/fragment_webview"/>
 </navigation>

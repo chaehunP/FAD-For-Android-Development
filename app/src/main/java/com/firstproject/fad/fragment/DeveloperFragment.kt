@@ -1,5 +1,6 @@
 package com.firstproject.fad.fragment
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,9 +12,8 @@ import androidx.fragment.app.Fragment
 import com.firstproject.fad.MainActivity
 import com.firstproject.fad.R
 import kotlinx.android.synthetic.main.fragment_developer.*
-import kotlinx.android.synthetic.main.fragment_developer.view.*
 
-class DeveloperFragment : Fragment(), View.OnClickListener {
+class DeveloperFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,6 +22,7 @@ class DeveloperFragment : Fragment(), View.OnClickListener {
         return inflater.inflate(R.layout.fragment_developer, container, false)
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -39,26 +40,23 @@ class DeveloperFragment : Fragment(), View.OnClickListener {
                     if (android_webView.canGoBack()) {
                         android_webView.goBack()
                     } else {
-//                    System.exit(0)
                         startActivity(Intent(context, MainActivity::class.java))
                         activity?.finish()
                     }
                 }
             })
+
+        setNavigationAndroid()
     }
 
-    override fun onClick(v: View?) {
-        v?.iv_back?.setOnClickListener {
-            activity?.onBackPressedDispatcher?.addCallback(
-                viewLifecycleOwner,
-                object : OnBackPressedCallback(true) {
-                    override fun handleOnBackPressed() {
-                        if (android_webView.canGoBack()) {
-                            android_webView.goBack()
-                        } else {
-                        }
-                    }
-                })
+    private fun setNavigationAndroid() {
+        toolbar_back_android.setNavigationOnClickListener {
+            if (android_webView.canGoBack()) {
+                android_webView.goBack()
+            } else {
+                startActivity(Intent(context, MainActivity::class.java))
+                activity?.finish()
+            }
         }
     }
 }

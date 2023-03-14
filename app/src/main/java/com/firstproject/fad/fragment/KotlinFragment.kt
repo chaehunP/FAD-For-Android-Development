@@ -1,5 +1,6 @@
 package com.firstproject.fad.fragment
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -21,6 +22,7 @@ class KotlinFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_kotlin, container, false)
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -38,11 +40,22 @@ class KotlinFragment : Fragment() {
                     if (kotlin_webView.canGoBack()) {
                         kotlin_webView.goBack()
                     } else {
-//                    System.exit(0)
                         startActivity(Intent(context, MainActivity::class.java))
                         activity?.finish()
                     }
                 }
             })
+        setNavigationKotlin()
+    }
+
+    private fun setNavigationKotlin() {
+        toolbar_back_kotlin.setNavigationOnClickListener {
+            if (kotlin_webView.canGoBack()) {
+                kotlin_webView.goBack()
+            } else {
+                startActivity(Intent(context, MainActivity::class.java))
+                activity?.finish()
+            }
+        }
     }
 }

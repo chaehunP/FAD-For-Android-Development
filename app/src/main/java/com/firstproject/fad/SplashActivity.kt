@@ -8,6 +8,8 @@ import android.os.Looper
 import android.text.Spannable
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
+import android.view.animation.AlphaAnimation
+import android.view.animation.Animation
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
@@ -22,7 +24,7 @@ class SplashActivity : AppCompatActivity() {
             finish()
 
         }
-        handler.postDelayed(runnable, 3000)
+        handler.postDelayed(runnable, 3500)
 
         splash_main.setOnClickListener{
             handler.removeCallbacks(runnable) // 화면을 클릭하고 메인화면으로 진입했을 때 다시 3초가 지나서 splash 화면이 안뜨도록 handler 중지
@@ -44,6 +46,13 @@ class SplashActivity : AppCompatActivity() {
         span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_yellow)),2,3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_orange)),1,2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         span.setSpan(ForegroundColorSpan(getColor(R.color.pastel_red)),0,1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+
+        val animation = AlphaAnimation(0.0f, 1.0f)
+        animation.duration = 3000
+        animation.startOffset = 20
+        animation.repeatMode = Animation.REVERSE
+        animation.repeatCount = Animation.INFINITE
+        tv_splash_title.startAnimation(animation)
 
     }
 }

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        >
+
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_title"
+            android:layout_gravity="center"
+            android:fontFamily="@font/nanum_pen"
+            android:bufferType="spannable"
+            android:textSize="32sp"
+            android:shadowColor="@color/black"
+            android:shadowRadius="2"
+            android:shadowDx="1"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.firstproject.fad.common.OutlineTextView
+                android:id="@+id/android_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/nanumsquareround"
+                android:shadowColor="@color/black"
+                android:shadowDx="1"
+                android:shadowRadius="2"
+                android:text="안드로이드"
+                android:textColor="@color/white"
+                android:textSize="31sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:textStroke="true"
+                app:textStrokeColor="@color/black"
+                app:textStrokeWidth="5" />
+
+            <com.firstproject.fad.common.OutlineTextView
+                android:id="@+id/main_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/nanumsquareround"
+                android:text="개발을 위한 세상에서"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/android_text"
+                app:layout_constraintStart_toEndOf="@id/android_text"
+                app:textStroke="true"
+                app:textStrokeColor="@color/black"
+                app:textStrokeWidth="5" />
+
+            <com.firstproject.fad.common.OutlineTextView
+                android:id="@+id/main_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nanumsquareround"
+                android:text="가장 하찮은 앱이에요 !"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/android_text"
+                app:layout_constraintTop_toBottomOf="@id/android_text"
+                app:textStroke="true"
+                app:textStrokeColor="@color/black"
+                app:textStrokeWidth="5" />
+
+            <com.firstproject.fad.common.OutlineTextView
+                android:id="@+id/news_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nanumsquareround"
+                android:text="IT 뉴스,"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/main_text2"
+                app:layout_constraintTop_toBottomOf="@id/main_text2"
+                app:textStroke="true"
+                app:textStrokeColor="@color/black"
+                app:textStrokeWidth="5" />
+
+            <com.firstproject.fad.common.OutlineTextView
+                android:id="@+id/main_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/nanumsquareround"
+                android:text="안드로이드 디벨로퍼,"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBaseline_toBaselineOf="@id/news_text2"
+                app:layout_constraintBottom_toBottomOf="@id/news_text2"
+                app:layout_constraintStart_toEndOf="@id/news_text2"
+                app:layout_constraintTop_toTopOf="@id/news_text2"
+                app:textStroke="true"
+                app:textStrokeColor="@color/black"
+                app:textStrokeWidth="5" />
+
+            <com.firstproject.fad.common.OutlineTextView
+                android:id="@+id/tv_kotlin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/nanumsquareround"
+                android:text="코틀린랭"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/main_text3"
+                app:layout_constraintStart_toEndOf="@id/main_text3"
+                app:textStroke="true"
+                app:textStrokeColor="@color/black"
+                app:textStrokeWidth="5" />
+
+            <com.firstproject.fad.common.OutlineTextView
+                android:id="@+id/main_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/nanumsquareround"
+                android:text="사이트를 편하게 방문할 수 있어요 :D"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/news_text2"
+                app:layout_constraintTop_toBottomOf="@id/news_text2"
+                app:textStroke="true"
+                app:textStrokeColor="@color/black"
+                app:textStrokeWidth="5" />
+
+            <View
+                android:id="@+id/devider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="20dp"
+                android:background="#EFEFEF"
+                app:layout_constraintTop_toBottomOf="@id/main_text4" />
+
+            <TextView
+                android:id="@+id/tv_today_goal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="30dp"
+                android:fontFamily="@font/nanumsquareround"
+                android:gravity="center"
+                android:text="오늘의 목표"
+                android:textSize="30sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/devider" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/checkbox"
+                app:layout_constraintEnd_toStartOf="@id/et_text_goal"
+                android:text="done"
+                android:fontFamily="@font/nanumsquareround"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="3dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/button_reset"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toBottomOf="@id/tv_today_goal"
+                app:layout_constraintEnd_toEndOf="@id/tv_today_goal"
+                android:text="리셋"
+                android:fontFamily="@font/nanumsquareround"
+                android:background="@color/pastel_green"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                />
+
+            <CheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/et_text_goal"
+                app:layout_constraintEnd_toStartOf="@id/et_text_goal"
+                app:layout_constraintTop_toTopOf="@id/et_text_goal" />
+
+            <EditText
+                android:id="@+id/et_text_goal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:hint="여기에 오늘의 목표를 작성하면 됩니다."
+                android:fontFamily="@font/nanumsquareround"
+                android:padding="5dp"
+                android:textColorHint="#AAAAAA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/button_reset"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:background="@null" />
+
+            <CheckBox
+                android:id="@+id/checkbox2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/et_text_goal2"
+                app:layout_constraintEnd_toStartOf="@id/et_text_goal2"
+                app:layout_constraintTop_toTopOf="@id/et_text_goal2" />
+
+            <EditText
+                android:id="@+id/et_text_goal2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="55dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:hint="여기에 오늘의 목표를 작성하면 됩니다."
+                android:fontFamily="@font/nanumsquareround"
+                android:padding="5dp"
+                android:textColorHint="#AAAAAA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_text_goal"
+                android:layout_marginTop="20dp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:background="@null"/>
+
+            <CheckBox
+                android:id="@+id/checkbox3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/et_text_goal3"
+                app:layout_constraintEnd_toStartOf="@id/et_text_goal3"
+                app:layout_constraintTop_toTopOf="@id/et_text_goal3" />
+
+            <EditText
+                android:id="@+id/et_text_goal3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:hint="여기에 오늘의 목표를 작성하면 됩니다."
+                android:fontFamily="@font/nanumsquareround"
+                android:padding="5dp"
+                android:textColorHint="#AAAAAA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_text_goal2"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:background="@null"/>
+
+            <CheckBox
+                android:id="@+id/checkbox4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/et_text_goal4"
+                app:layout_constraintEnd_toStartOf="@id/et_text_goal4"
+                app:layout_constraintTop_toTopOf="@id/et_text_goal4" />
+
+            <EditText
+                android:id="@+id/et_text_goal4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:hint="여기에 오늘의 목표를 작성하면 됩니다."
+                android:fontFamily="@font/nanumsquareround"
+                android:padding="5dp"
+                android:textColorHint="#AAAAAA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_text_goal3"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:background="@null"/>
+
+            <CheckBox
+                android:id="@+id/checkbox5"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/et_text_goal5"
+                app:layout_constraintEnd_toStartOf="@id/et_text_goal5"
+                app:layout_constraintTop_toTopOf="@id/et_text_goal5" />
+
+            <EditText
+                android:id="@+id/et_text_goal5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="30dp"
+                android:gravity="center"
+                android:hint="여기에 오늘의 목표를 작성하면 됩니다."
+                android:fontFamily="@font/nanumsquareround"
+                android:padding="5dp"
+                android:textColorHint="#AAAAAA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_text_goal4"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:background="@null"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

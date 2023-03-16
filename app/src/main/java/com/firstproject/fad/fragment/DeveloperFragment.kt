@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebSettings
 import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
@@ -29,6 +30,7 @@ class DeveloperFragment : Fragment() {
         android_webView.apply {
             webViewClient = WebViewClient()
             settings.javaScriptEnabled = true
+            settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
         }
 
         android_webView.loadUrl("https://developer.android.com/?hl=ko")

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebSettings
 import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
@@ -29,6 +30,7 @@ class KotlinFragment : Fragment() {
         kotlin_webView.apply {
             webViewClient = WebViewClient()
             settings.javaScriptEnabled = true
+            settings.cacheMode = WebSettings.LOAD_CACHE_ELSE_NETWORK
         }
 
         kotlin_webView.loadUrl("https://kotlinlang.org/docs/basic-syntax.html")

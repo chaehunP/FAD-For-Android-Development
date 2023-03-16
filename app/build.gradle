@@ -49,4 +49,6 @@ dependencies {
     // kotlin coroutine
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0'
 
+    // Toast
+    implementation 'io.github.muddz:styleabletoast:2.4.0'
 }

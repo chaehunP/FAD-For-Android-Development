@@ -2,6 +2,7 @@ package com.firstproject.fad.fragment
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.SharedPreferences
 import android.graphics.Paint
 import android.os.Bundle
 import android.text.Spannable
@@ -17,11 +18,15 @@ import android.widget.EditText
 import androidx.core.content.ContextCompat.getColor
 import androidx.fragment.app.Fragment
 import com.firstproject.fad.R
+import io.github.muddz.styleabletoast.StyleableToast
 import kotlinx.android.synthetic.main.fragment_home.main_title
 import kotlinx.android.synthetic.main.fragment_home_test.*
 
 
 class HomeFragment : Fragment() {
+
+    private lateinit var sharedPreferences: SharedPreferences
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,6 +38,8 @@ class HomeFragment : Fragment() {
     @SuppressLint("ResourceAsColor")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE)
 
         (main_title!!.text as Spannable).apply {
             setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_violet)), 12, 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
@@ -53,7 +60,6 @@ class HomeFragment : Fragment() {
             et.setOnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     // SharedPreferences에 작성한 텍스트 저장
-                    val sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE)
                     val editor = sharedPreferences.edit()
                     editor.putString(key, et.text.toString())
                     editor.apply()
@@ -72,15 +78,20 @@ class HomeFragment : Fragment() {
 
         // 체크박스의 입력 이벤트 처리
         fun setupCheckBoxtListener(cb: CheckBox, key: String) {
+            val isChecked = sharedPreferences.getBoolean(key, false) // SharedPreferences에서 key에 해당하는 값을 가져오는데, 만약 해당하는 값이 없다면 기본값으로 false를 반환
+            cb.isChecked = isChecked
             cb.setOnCheckedChangeListener { _, isChecked ->
                 // 체크 여부와 취소선 상태를 SharedPreferences에 저장
-                val sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE)
                 val editor = sharedPreferences.edit()
                 editor.putBoolean(key, isChecked)
 //            editor.putInt("goal_paint_flags", et_text_goal.paintFlags)
                 editor.apply()
+                if(cb.isChecked) {
+                    StyleableToast.makeText(requireContext(), "clear", R.style.clearToast).show()
+                }
             }
         }
+
 
         // 리셋 버튼을 눌러 처음 상태로 되돌리는 메서드
         fun resetViewValues(editText: EditText, checkBox: CheckBox) {
@@ -109,7 +120,6 @@ class HomeFragment : Fragment() {
         setupCheckBoxtListener(checkbox5, "goal_checked5")
 
         // 기존에 저장된 텍스트와 체크 여부 불러오기
-        val sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE)
         val goalText = sharedPreferences.getString("goal_text", "")
         val goalText2 = sharedPreferences.getString("goal_text2", "")
         val goalText3 = sharedPreferences.getString("goal_text3", "")

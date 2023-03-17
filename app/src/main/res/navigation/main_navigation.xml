@@ -9,7 +9,7 @@
         android:id="@+id/home"
         android:name="com.firstproject.fad.fragment.HomeFragment"
         android:label="HomeFragment"
-        tools:layout="@layout/fragment_home"/>
+        tools:layout="@layout/fragment_home_test"/>
     <fragment
         android:id="@+id/news"
         android:name="com.firstproject.fad.fragment.news.NewsFragment"

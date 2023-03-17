@@ -8,7 +8,7 @@
         <item name="stTextSize">30sp</item>
         <item name="stColorBackground">@color/white</item>
         <item name="stStrokeWidth">3dp</item>
-        <item name="stStrokeColor">@color/pastel_green</item>
+        <item name="stStrokeColor">@color/black</item>
         <item name="stIconStart">@drawable/ic_baseline_celebration_24</item>
         <item name="stIconEnd">@drawable/ic_baseline_celebration_24</item>
         <item name="stLength">SHORT</item> LONG or SHORT

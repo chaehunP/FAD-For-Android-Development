@@ -41,19 +41,19 @@ class HomeFragment : Fragment() {
 
         sharedPreferences = requireActivity().getPreferences(Context.MODE_PRIVATE)
 
-        (main_title!!.text as Spannable).apply {
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_violet)), 12, 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_blue)), 11, 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_green)), 10, 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_yellow)), 8, 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_orange)), 7, 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_red)), 6, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_blue)), 4, 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_green)), 3, 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_yellow)), 2, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_orange)), 1, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_red)), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-        }
+//        (main_title!!.text as Spannable).apply {
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_violet)), 12, 13, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_blue)), 11, 12, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_green)), 10, 11, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_yellow)), 8, 9, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_orange)), 7, 8, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_red)), 6, 7, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_blue)), 4, 5, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_green)), 3, 4, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_yellow)), 2, 3, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_orange)), 1, 2, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.pastel_red)), 0, 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+//        }
 
         // EditText의 입력 완료 이벤트 처리
          fun setupEditTextListener(et: EditText, key: String) {

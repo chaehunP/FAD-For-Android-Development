@@ -4,8 +4,8 @@
     android:id="@+id/newsCard"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="12dp"
-    android:layout_marginBottom="15dp"
+    android:layout_margin="14dp"
+    android:layout_marginBottom="30dp"
     android:background="@color/white"
     android:elevation="5dp"
     android:padding="5dp"
@@ -25,6 +25,7 @@
             android:padding="7dp"
             android:text="@string/news_title"
             android:textSize="21sp"
+            android:textColor="#B3000000"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
